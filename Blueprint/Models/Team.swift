@@ -17,6 +17,7 @@ struct Team: Decodable {
     enum CodingKeys: String, CodingKey {
         case name
         case city
+        case country
         case nickname
         case number = "team_number"
         case province = "state_prov"
@@ -38,11 +39,21 @@ struct Team: Decodable {
     /// A String representing the city in which the team is based. Optional.
     public let city: String?
     
+    /// A String representing the country in which the team is based. Optional.
+    public let country: String?
+    
     /// A String representing the province in which the team is based. Optional.
     public let province: String?
     
     /// An Unsigned Integer representing the year during which the team received
     /// the rookie all-star award. Optional.
     public let rookieYear: UInt?
+    
+    public var location: String {
+        guard let city = self.city,
+              let country = self.country,
+              let province = self.province else { return "No known location" }
+        return "\(city), \(province), \(country)"
+    }
     
 }

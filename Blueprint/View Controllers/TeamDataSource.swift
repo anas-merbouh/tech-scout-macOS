@@ -11,6 +11,7 @@ import Cocoa
 protocol TeamDataSourceDelegate: class {
     
     func teamDataSource(_ teamDataSource: TeamDataSource, didFinishLoadingTeams loadedTeams: [Team]) -> Void
+    func teamDataSource(_ teamDataSource: TeamDataSource, didFinishLoadingTeamsWithError error: Error) -> Void
     
 }
 
@@ -57,7 +58,7 @@ extension TeamDataSource: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return teams.count
     }
-    
+        
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         return teams[row]
     }
@@ -68,12 +69,28 @@ extension TeamDataSource: NSTableViewDataSource {
 extension TeamDataSource: NSTableViewDelegate {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        guard tableColumn == tableView.tableColumns[0] else { return nil }
-        guard let cell = tableView.makeView(withIdentifier: TeamNameTableCellView.reuseIdentifier, owner: nil) as? NSTableCellView else { return nil }
-        
-        // Configure the cell...
         let team = teams[row]
-        cell.textField?.stringValue = team.name
+        var cell: NSTableCellView!
+        
+        if tableColumn == tableView.tableColumns[0] {
+            cell = tableView.makeView(withIdentifier: TeamNumberTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView
+            cell.textField?.stringValue = "\(team.number)"
+            
+            // Set the column's title.
+            tableColumn?.title = "Team Number"
+        } else if tableColumn == tableView.tableColumns[1] {
+            cell = tableView.makeView(withIdentifier: TeamNameTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView
+            cell.textField?.stringValue = team.nickname
+        
+            // Set the column's title.
+            tableColumn?.title = "Team Name"
+        } else {
+            cell = tableView.makeView(withIdentifier: TeamLocationTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView
+            cell.textField?.stringValue = team.location
+            
+            // Set the column's title.
+            tableColumn?.title = "Location"
+        }
         
         return cell
     }

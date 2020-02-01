@@ -58,4 +58,8 @@ extension TeamListViewController: TeamDataSourceDelegate {
         tableView.reloadData()
     }
     
+    func teamDataSource(_ teamDataSource: TeamDataSource, didFinishLoadingTeamsWithError error: Error) {
+        
+    }
+    
 }

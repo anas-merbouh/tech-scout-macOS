@@ -11,13 +11,5 @@ import Cocoa
 class TeamNameTableCellView: NSTableCellView {
 
     public static let reuseIdentifier: NSUserInterfaceItemIdentifier = NSUserInterfaceItemIdentifier(rawValue: "\(TeamNameTableCellView.self)")
-
-    // MARK: - Initialization
-    
-    // MARK: - Methods
-    
-    public func populate(withTeamName teamName: String) {
-        
-    }
     
 }
