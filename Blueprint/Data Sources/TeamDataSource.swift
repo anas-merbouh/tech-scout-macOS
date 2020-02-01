@@ -73,19 +73,19 @@ extension TeamDataSource: NSTableViewDelegate {
         var cell: NSTableCellView!
         
         if tableColumn == tableView.tableColumns[0] {
-            cell = tableView.makeView(withIdentifier: TeamNumberTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView
+            cell = (tableView.makeView(withIdentifier: TeamNumberTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView)
             cell.textField?.stringValue = "\(team.number)"
             
             // Set the column's title.
             tableColumn?.title = "Team Number"
         } else if tableColumn == tableView.tableColumns[1] {
-            cell = tableView.makeView(withIdentifier: TeamNameTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView
+            cell = (tableView.makeView(withIdentifier: TeamNameTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView)
             cell.textField?.stringValue = team.nickname
         
             // Set the column's title.
             tableColumn?.title = "Team Name"
         } else {
-            cell = tableView.makeView(withIdentifier: TeamLocationTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView
+            cell = (tableView.makeView(withIdentifier: TeamLocationTableCellView.reuseIdentifier, owner: nil) as! NSTableCellView)
             cell.textField?.stringValue = team.location
             
             // Set the column's title.

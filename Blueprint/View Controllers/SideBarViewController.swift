@@ -10,9 +10,15 @@ import Cocoa
 
 protocol SideBarViewControllerDelegate: class {
     
+    /// Notifies the delegate every time an item of the side menu was clicked by the user.
+    ///
+    /// - parameter sideBarViewController: A SideBarViewController representing the controller in which the side bar item was clicked.
+    /// - parameter sideBarItem: A SideBarItem representing the side bar item selected by the user.
     func sideBarViewController(_ sideBarViewController: SideBarViewController, didSelectSideBarItem sideBarItem: SideBarItem) -> Void
     
 }
+
+fileprivate let dataCellIdentifier: NSUserInterfaceItemIdentifier = NSUserInterfaceItemIdentifier("DataCell")
 
 class SideBarViewController: NSViewController {
 
@@ -30,9 +36,6 @@ class SideBarViewController: NSViewController {
         
         // Call the super class's implementation of the constructor.
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        // Set the side bar data source's delegate.
-        sideBarDataSource.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -40,9 +43,6 @@ class SideBarViewController: NSViewController {
         
         // Call the super class's implementation of the constructor.
         super.init(coder: coder)
-        
-        // Set the side bar data source's delegate.
-        sideBarDataSource.delegate = self
     }
     
     // MARK: - View's lifecycle
@@ -51,17 +51,34 @@ class SideBarViewController: NSViewController {
         super.viewDidLoad()
         
         // Do view setup here.
-        outlineView.delegate = sideBarDataSource
+        outlineView.delegate = self
         outlineView.dataSource = sideBarDataSource
     }
     
 }
 
-// MARK: - Side Bar data source
-extension SideBarViewController: SideBarDataSourceDelegate {
+// MARK: - Outline view delegate
+extension SideBarViewController: NSOutlineViewDelegate {
     
-    func sideBarDataSource(_ sideBarDataSource: SideBarDataSource, didSelectSideBarItem sideBarItem: SideBarItem) {
-        delegate?.sideBarViewController(self, didSelectSideBarItem: sideBarItem)
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
+        let view = outlineView.makeView(withIdentifier: dataCellIdentifier, owner: nil) as? NSTableCellView
+        
+        // Configure the view...
+        if let item = item as? SideBarItem {
+            view?.textField?.stringValue = item.name
+        }
+        
+        return view
+    }
+    
+    func outlineViewSelectionDidChange(_ notification: Notification) {
+        guard let outlineView = notification.object as? NSOutlineView else { return }
+        
+        // Get the Side Bar Item associated with the selected row.
+        let selectedSideBarItem = sideBarDataSource.sideBarItems[outlineView.selectedRow]
+        
+        // Notify the delegate that a side bar item was clicked by the user.
+        delegate?.sideBarViewController(self, didSelectSideBarItem: selectedSideBarItem)
     }
     
 }
