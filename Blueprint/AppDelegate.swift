@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Blueprint
 //
-//  Created by Samuel Proulx on 2020-01-31.
+//  Created by Anas Merbouh on 2020-01-31.
 //  Copyright © 2020 Blueprint Technologies Inc. All rights reserved.
 //
 
