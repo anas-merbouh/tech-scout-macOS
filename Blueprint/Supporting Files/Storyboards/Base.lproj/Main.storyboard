@@ -678,22 +678,38 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-74"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Blueprint" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="F3556475-48AB-4520-9FE8-9A51BCDC4DB2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="SQ8-At-Ose">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="PHH-NI-f3P"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="JaT-rm-BDp"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="CoF-1I-bW1"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lH0-PG-bpk"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="OPY-0F-leb"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="PHH-NI-f3P"/>
+                                <toolbarItem reference="JaT-rm-BDp"/>
+                                <toolbarItem reference="OPY-0F-leb"/>
+                                <toolbarItem reference="CoF-1I-bW1"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="toolbar" destination="SQ8-At-Ose" id="nUB-b5-M1B"/>
                         <segue destination="g6r-VH-3s5" kind="relationship" relationship="window.shadowedContentViewController" id="x3S-L1-eMg"/>
                     </connections>
                 </windowController>

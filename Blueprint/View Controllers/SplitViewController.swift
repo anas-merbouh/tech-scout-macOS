@@ -39,8 +39,22 @@ class SplitViewController: NSSplitViewController {
         sideBarViewController.delegate = self
     }
     
-    override func splitView(_ splitView: NSSplitView, shouldHideDividerAt dividerIndex: Int) -> Bool {
-        return true
+    // MARK: - Helper methods
+    
+    private static func viewController(forXIBName XIBName: String) -> NSViewController? {
+        switch XIBName {
+        case "TeamListViewController":
+            return TeamListViewController()
+            
+        case "CompetitionDataViewController":
+            return CompetitionDataViewController()
+            
+        case "AllianceSelectionViewController":
+            return AllianceSelectionViewController()
+            
+        default:
+            return nil
+        }
     }
     
 }
@@ -49,7 +63,9 @@ class SplitViewController: NSSplitViewController {
 extension SplitViewController: SideBarViewControllerDelegate {
     
     func sideBarViewController(_ sideBarViewController: SideBarViewController, didSelectSideBarItem sideBarItem: SideBarItem) {
-        let viewController = NSViewController(nibName: sideBarItem.XIBName, bundle: nil)
+        guard let viewController = SplitViewController.viewController(forXIBName: sideBarItem.XIBName) else { return }
+        
+        // Get the split view item currently displayed by the view controller.
         let currentSplitViewItem = splitViewItems[1]
         
         // Remove the current view controller displayed at the index number of the split views.

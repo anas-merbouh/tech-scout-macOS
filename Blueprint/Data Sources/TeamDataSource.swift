@@ -23,16 +23,22 @@ class TeamDataSource: NSObject {
     
     /// An array representing the teams participating to the FIRST Robotics
     /// Competition.
-    private var teams: [Team]
+    private var _teams: [Team]
     
     // A TeamRepository representing the object used to retrieve
     // the teams participating to the FIRST Robotics Competition.
     private let teamRepository: TeamRepository
+    
+    /// An array representing the teams participating to the FIRST Robotics
+    /// Competition managed by the data source.
+    public var teams: [Team] {
+        return _teams
+    }
 
     // MARK: - Initialization
     
     override init() {
-        self.teams = []
+        self._teams = []
         self.teamRepository = TeamRepository()
         
         // Call the super class's implementation of the constructor.
@@ -43,8 +49,8 @@ class TeamDataSource: NSObject {
     
     public func loadTeams() {
         do {
-            teams = try teamRepository.loadTeams()
-            delegate?.teamDataSource(self, didFinishLoadingTeams: teams)
+            _teams = try teamRepository.loadTeams()
+            delegate?.teamDataSource(self, didFinishLoadingTeams: _teams)
         } catch {
             print("An error occurred while trying to load the data : \(error.localizedDescription)")
         }
@@ -56,11 +62,11 @@ class TeamDataSource: NSObject {
 extension TeamDataSource: NSTableViewDataSource {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return teams.count
+        return _teams.count
     }
         
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return teams[row]
+        return _teams[row]
     }
     
 }
@@ -69,7 +75,7 @@ extension TeamDataSource: NSTableViewDataSource {
 extension TeamDataSource: NSTableViewDelegate {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let team = teams[row]
+        let team = _teams[row]
         var cell: NSTableCellView!
         
         if tableColumn == tableView.tableColumns[0] {
@@ -94,5 +100,5 @@ extension TeamDataSource: NSTableViewDelegate {
         
         return cell
     }
-    
+        
 }

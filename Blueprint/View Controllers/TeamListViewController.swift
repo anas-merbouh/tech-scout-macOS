@@ -44,12 +44,30 @@ class TeamListViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableView.rowHeight = 40
-        tableView.delegate = dataSource
-        tableView.dataSource = dataSource
+        configureTableView()
         dataSource.loadTeams()
     }
 
+    // MARK: - Methods
+    
+    private func configureTableView() {
+        tableView.target = self
+        tableView.rowHeight = 40
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
+        tableView.doubleAction = #selector(onTableViewDoubleClick(_:))
+    }
+    
+    @objc
+    private func onTableViewDoubleClick(_ sender: AnyObject?) {
+        guard tableView.selectedRow >= 0 else { return }
+        
+        // Get an instance of the selected team.
+        let selectedTeam = dataSource.teams[tableView.selectedRow]
+        
+        print("The name of the selected team is : \(selectedTeam.name)")
+    }
+    
 }
 
 // MARK: - Team Data Source delegate
