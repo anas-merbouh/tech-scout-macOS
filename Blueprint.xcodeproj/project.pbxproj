@@ -20,6 +20,11 @@
 		1E9992BF23E50F200088255B /* TeamNameTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */; };
 		BCCF821923E532BD00C32ABF /* TeamNumberTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF821823E532BD00C32ABF /* TeamNumberTableCellView.swift */; };
 		BCCF821B23E533EB00C32ABF /* TeamLocationTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF821A23E533EB00C32ABF /* TeamLocationTableCellView.swift */; };
+		BCCF821D23E53E9300C32ABF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF821C23E53E9300C32ABF /* SideBarViewController.swift */; };
+		BCCF821F23E53EE200C32ABF /* SideBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF821E23E53EE200C32ABF /* SideBarDataSource.swift */; };
+		BCCF822123E5416100C32ABF /* SideBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF822023E5416100C32ABF /* SideBarItem.swift */; };
+		BCCF822423E549A900C32ABF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCCF822323E549A900C32ABF /* Localizable.strings */; };
+		BCCF822623E54AFA00C32ABF /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF822523E54AFA00C32ABF /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNameTableCellView.swift; sourceTree = "<group>"; };
 		BCCF821823E532BD00C32ABF /* TeamNumberTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNumberTableCellView.swift; sourceTree = "<group>"; };
 		BCCF821A23E533EB00C32ABF /* TeamLocationTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLocationTableCellView.swift; sourceTree = "<group>"; };
+		BCCF821C23E53E9300C32ABF /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		BCCF821E23E53EE200C32ABF /* SideBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarDataSource.swift; sourceTree = "<group>"; };
+		BCCF822023E5416100C32ABF /* SideBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarItem.swift; sourceTree = "<group>"; };
+		BCCF822323E549A900C32ABF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BCCF822523E54AFA00C32ABF /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +154,9 @@
 		1E9992A823E4FC6B0088255B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BCCF822523E54AFA00C32ABF /* SplitViewController.swift */,
+				BCCF821C23E53E9300C32ABF /* SideBarViewController.swift */,
+				BCCF821E23E53EE200C32ABF /* SideBarDataSource.swift */,
 				1E9992B923E5094C0088255B /* TeamListViewController.swift */,
 				1E9992BB23E509850088255B /* TeamDataSource.swift */,
 			);
@@ -155,6 +168,7 @@
 			children = (
 				1E9992B423E503E60088255B /* Teams */,
 				1E9992AA23E4FC860088255B /* Storyboards */,
+				BCCF822223E5476900C32ABF /* Localizations */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				1E9992AC23E4FDDB0088255B /* Team.swift */,
+				BCCF822023E5416100C32ABF /* SideBarItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +214,14 @@
 				BCCF821A23E533EB00C32ABF /* TeamLocationTableCellView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BCCF822223E5476900C32ABF /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF822323E549A900C32ABF /* Localizable.strings */,
+			);
+			path = Localizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E99928123E4FC650088255B /* Assets.xcassets in Resources */,
+				BCCF822423E549A900C32ABF /* Localizable.strings in Resources */,
 				1E9992B623E503F00088255B /* Teams.json in Resources */,
 				1E99928423E4FC650088255B /* Main.storyboard in Resources */,
 			);
@@ -333,13 +357,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9992AD23E4FDDB0088255B /* Team.swift in Sources */,
+				BCCF821D23E53E9300C32ABF /* SideBarViewController.swift in Sources */,
 				1E9992B023E4FF440088255B /* TeamRepository.swift in Sources */,
+				BCCF822123E5416100C32ABF /* SideBarItem.swift in Sources */,
 				1E9992BC23E509850088255B /* TeamDataSource.swift in Sources */,
 				1E9992BA23E5094C0088255B /* TeamListViewController.swift in Sources */,
 				1E9992BF23E50F200088255B /* TeamNameTableCellView.swift in Sources */,
 				BCCF821B23E533EB00C32ABF /* TeamLocationTableCellView.swift in Sources */,
+				BCCF821F23E53EE200C32ABF /* SideBarDataSource.swift in Sources */,
 				1E99927D23E4FC620088255B /* AppDelegate.swift in Sources */,
 				BCCF821923E532BD00C32ABF /* TeamNumberTableCellView.swift in Sources */,
+				BCCF822623E54AFA00C32ABF /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

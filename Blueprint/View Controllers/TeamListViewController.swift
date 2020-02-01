@@ -44,6 +44,7 @@ class TeamListViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.rowHeight = 40
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
         dataSource.loadTeams()
@@ -59,7 +60,7 @@ extension TeamListViewController: TeamDataSourceDelegate {
     }
     
     func teamDataSource(_ teamDataSource: TeamDataSource, didFinishLoadingTeamsWithError error: Error) {
-        
+        print("An error occurred while trying to load the teams : \(error.localizedDescription)")
     }
     
 }
