@@ -25,9 +25,9 @@ class TeamDataSource: NSObject {
     /// Competition.
     private var _teams: [Team]
     
-    // A TeamRepository representing the object used to retrieve
+    // A TeamLoading conforming object representing the object used to retrieve
     // the teams participating to the FIRST Robotics Competition.
-    private let teamRepository: TeamRepository
+    private let teamLoader: TeamLoading
     
     /// An array representing the teams participating to the FIRST Robotics
     /// Competition managed by the data source.
@@ -37,9 +37,9 @@ class TeamDataSource: NSObject {
 
     // MARK: - Initialization
     
-    override init() {
+    init(teamLoader: TeamLoading) {
         self._teams = []
-        self.teamRepository = TeamRepository()
+        self.teamLoader = teamLoader
         
         // Call the super class's implementation of the constructor.
         super.init()
@@ -49,7 +49,7 @@ class TeamDataSource: NSObject {
     
     public func loadTeams() {
         do {
-            _teams = try teamRepository.loadTeams()
+            _teams = try teamLoader.loadTeams()
             delegate?.teamDataSource(self, didFinishLoadingTeams: _teams)
         } catch {
             print("An error occurred while trying to load the data : \(error.localizedDescription)")

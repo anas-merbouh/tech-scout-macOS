@@ -19,7 +19,7 @@ class TeamListViewController: NSViewController {
     // MARK: - Initialization
     
     override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
-        self.dataSource = TeamDataSource()
+        self.dataSource = TeamDataSource(teamLoader: TeamController())
         
         // Call the super class's implementation of the constructor.
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -29,7 +29,7 @@ class TeamListViewController: NSViewController {
     }
     
     required init?(coder: NSCoder) {
-        self.dataSource = TeamDataSource()
+        self.dataSource = TeamDataSource(teamLoader: TeamController())
         
         // Call the super class's implementation of the constructor.
         super.init(coder: coder)
@@ -64,8 +64,6 @@ class TeamListViewController: NSViewController {
         
         // Get an instance of the selected team.
         let selectedTeam = dataSource.teams[tableView.selectedRow]
-        
-        print("The name of the selected team is : \(selectedTeam.name)")
     }
     
 }

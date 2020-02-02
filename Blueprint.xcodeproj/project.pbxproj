@@ -13,12 +13,15 @@
 		1E99929023E4FC660088255B /* BlueprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99928F23E4FC660088255B /* BlueprintTests.swift */; };
 		1E99929B23E4FC660088255B /* BlueprintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99929A23E4FC660088255B /* BlueprintUITests.swift */; };
 		1E9992AD23E4FDDB0088255B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992AC23E4FDDB0088255B /* Team.swift */; };
-		1E9992B023E4FF440088255B /* TeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992AF23E4FF440088255B /* TeamRepository.swift */; };
 		1E9992B623E503F00088255B /* Teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9992B523E503F00088255B /* Teams.json */; };
 		1E9992BA23E5094C0088255B /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992B923E5094C0088255B /* TeamListViewController.swift */; };
 		1E9992BC23E509850088255B /* TeamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992BB23E509850088255B /* TeamDataSource.swift */; };
 		1E9992BF23E50F200088255B /* TeamNameTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */; };
 		BC22778A23E642C9001318E2 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC22778923E642C9001318E2 /* WindowController.swift */; };
+		BC22778C23E64B5F001318E2 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC22778B23E64B5F001318E2 /* TeamController.swift */; };
+		BC29425A23E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29425923E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift */; };
+		BC29425C23E6568D001A1B2A /* NotificationCenter+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29425B23E6568D001A1B2A /* NotificationCenter+Navigation.swift */; };
+		BC29425E23E65769001A1B2A /* NSNotification_Name+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29425D23E65769001A1B2A /* NSNotification_Name+Name.swift */; };
 		BC63CEA123E5DE5900D0F4B5 /* Spacer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = BC63CEA023E5DE5900D0F4B5 /* Spacer.tiff */; };
 		BC63CEB223E5ED6800D0F4B5 /* CompetitionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC63CEB023E5ED6800D0F4B5 /* CompetitionDataViewController.swift */; };
 		BC63CEB323E5ED6800D0F4B5 /* CompetitionDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC63CEB123E5ED6800D0F4B5 /* CompetitionDataViewController.xib */; };
@@ -67,12 +70,15 @@
 		1E99929A23E4FC660088255B /* BlueprintUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueprintUITests.swift; sourceTree = "<group>"; };
 		1E99929C23E4FC660088255B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E9992AC23E4FDDB0088255B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		1E9992AF23E4FF440088255B /* TeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepository.swift; sourceTree = "<group>"; };
 		1E9992B523E503F00088255B /* Teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Teams.json; sourceTree = "<group>"; };
 		1E9992B923E5094C0088255B /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		1E9992BB23E509850088255B /* TeamDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataSource.swift; sourceTree = "<group>"; };
 		1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNameTableCellView.swift; sourceTree = "<group>"; };
 		BC22778923E642C9001318E2 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		BC22778B23E64B5F001318E2 /* TeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
+		BC29425923E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSToolbarItem_Identifier+Identifiers.swift"; sourceTree = "<group>"; };
+		BC29425B23E6568D001A1B2A /* NotificationCenter+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Navigation.swift"; sourceTree = "<group>"; };
+		BC29425D23E65769001A1B2A /* NSNotification_Name+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification_Name+Name.swift"; sourceTree = "<group>"; };
 		BC63CEA023E5DE5900D0F4B5 /* Spacer.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Spacer.tiff; sourceTree = "<group>"; };
 		BC63CEB023E5ED6800D0F4B5 /* CompetitionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionDataViewController.swift; sourceTree = "<group>"; };
 		BC63CEB123E5ED6800D0F4B5 /* CompetitionDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetitionDataViewController.xib; sourceTree = "<group>"; };
@@ -143,8 +149,8 @@
 				1E9992BD23E50E6A0088255B /* Views */,
 				1E9992A823E4FC6B0088255B /* View Controllers */,
 				BC22778823E642B9001318E2 /* Other Controllers */,
-				1E9992AE23E4FF2F0088255B /* Repositories */,
 				BC63CEB423E5ED8200D0F4B5 /* Data Sources */,
+				BC29425823E64FAE001A1B2A /* Extensions */,
 				1E9992A923E4FC780088255B /* Supporting Files */,
 				1E99928023E4FC650088255B /* Assets.xcassets */,
 				1E99928523E4FC650088255B /* Info.plist */,
@@ -213,14 +219,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1E9992AE23E4FF2F0088255B /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				1E9992AF23E4FF440088255B /* TeamRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		1E9992B423E503E60088255B /* Teams */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,9 +240,20 @@
 		BC22778823E642B9001318E2 /* Other Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC22778B23E64B5F001318E2 /* TeamController.swift */,
 				BC22778923E642C9001318E2 /* WindowController.swift */,
 			);
 			path = "Other Controllers";
+			sourceTree = "<group>";
+		};
+		BC29425823E64FAE001A1B2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC29425923E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift */,
+				BC29425B23E6568D001A1B2A /* NotificationCenter+Navigation.swift */,
+				BC29425D23E65769001A1B2A /* NSNotification_Name+Name.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BC63CEAB23E5E9C300D0F4B5 /* XIBs */ = {
@@ -414,10 +423,13 @@
 			files = (
 				1E9992AD23E4FDDB0088255B /* Team.swift in Sources */,
 				BCCF821D23E53E9300C32ABF /* SideBarViewController.swift in Sources */,
-				1E9992B023E4FF440088255B /* TeamRepository.swift in Sources */,
 				BCCF822123E5416100C32ABF /* SideBarItem.swift in Sources */,
+				BC29425E23E65769001A1B2A /* NSNotification_Name+Name.swift in Sources */,
+				BC29425A23E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift in Sources */,
+				BC29425C23E6568D001A1B2A /* NotificationCenter+Navigation.swift in Sources */,
 				1E9992BC23E509850088255B /* TeamDataSource.swift in Sources */,
 				1E9992BA23E5094C0088255B /* TeamListViewController.swift in Sources */,
+				BC22778C23E64B5F001318E2 /* TeamController.swift in Sources */,
 				1E9992BF23E50F200088255B /* TeamNameTableCellView.swift in Sources */,
 				BCCF821B23E533EB00C32ABF /* TeamLocationTableCellView.swift in Sources */,
 				BCCF821F23E53EE200C32ABF /* SideBarDataSource.swift in Sources */,

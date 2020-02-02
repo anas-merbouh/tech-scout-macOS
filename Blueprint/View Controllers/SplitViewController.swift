@@ -16,8 +16,8 @@ class SplitViewController: NSSplitViewController {
         super.viewDidLoad()
         
         // Do view setup here.
+        configureSideBarViewController()
         configureInitialDetailViewController()
-        configureSplitViewItems()
     }
     
     // MARK: - Methods
@@ -32,7 +32,7 @@ class SplitViewController: NSSplitViewController {
         addSplitViewItem(initialSplitViewItem)
     }
     
-    private func configureSplitViewItems() {
+    private func configureSideBarViewController() {
         guard let sideBarViewController = splitViewItems[0].viewController as? SideBarViewController else { return }
     
         // Set the view controller's delegate.
@@ -55,6 +55,17 @@ class SplitViewController: NSSplitViewController {
         default:
             return nil
         }
+    }
+    
+}
+
+
+// MARK: - Window Toolbar delegate
+extension SplitViewController: WindowToolbarDelegate {
+    
+    func windowToolbar(_ windowToolbar: NSToolbar, didClickSideBarToolbarItem sideBarToolbarItem: NSToolbarItem) {
+        let sideBarSplitViewItemAnimator = splitViewItems[0].animator()
+        sideBarSplitViewItemAnimator.isCollapsed = !sideBarSplitViewItemAnimator.isCollapsed
     }
     
 }

@@ -10,10 +10,10 @@ import Cocoa
 
 protocol SideBarViewControllerDelegate: class {
     
-    /// Notifies the delegate every time an item of the side menu was clicked by the user.
+    /// Notifies the delegate every time an item of the side menu is clicked by the user.
     ///
     /// - parameter sideBarViewController: A SideBarViewController representing the controller in which the side bar item was clicked.
-    /// - parameter sideBarItem: A SideBarItem representing the side bar item selected by the user.
+    /// - parameter sideBarItem:           A SideBarItem representing the side bar item clicked by the user.
     func sideBarViewController(_ sideBarViewController: SideBarViewController, didSelectSideBarItem sideBarItem: SideBarItem) -> Void
     
 }
@@ -59,6 +59,10 @@ class SideBarViewController: NSViewController {
 
 // MARK: - Outline view delegate
 extension SideBarViewController: NSOutlineViewDelegate {
+    
+    func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat {
+        return 45
+    }
     
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         let view = outlineView.makeView(withIdentifier: dataCellIdentifier, owner: nil) as? NSTableCellView

@@ -1,15 +1,22 @@
 //
-//  TeamRepository.swift
+//  TeamController.swift
 //  Blueprint
 //
-//  Created by Anas Merbouh on 2020-01-31.
+//  Created by Anas Merbouh on 2020-02-01.
 //  Copyright © 2020 Blueprint Technologies Inc. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
-class TeamRepository: NSObject {
+protocol TeamLoading {
     
+    /// Loads all teahs teams competing in the FIRST Robotics Competition
+    func loadTeams() throws -> [Team]
+    
+}
+
+class TeamController: NSObject {
+
     public enum LoadingError: Error {
         case fileNotFound, invalidContent
     }
@@ -20,13 +27,25 @@ class TeamRepository: NSObject {
         case json = "json"
     }
     
-    // MARK: - Methods
+    // MARK: - Properties
+    
+    private let bundle: Bundle
+    
+    // MARK: - Initialization
+    
+    override init() {
+        self.bundle = Bundle(for: TeamController.self)
+        
+        // Call the super class's implementation of the constructor.
+        super.init()
+    }
+        
+}
+
+// MARK: - Team Loading
+extension TeamController: TeamLoading {
     
     public func loadTeams() throws -> [Team] {
-        let bundle = Bundle(for: TeamRepository.self)
-        
-        // Fetch all the teams participating to the FIRST Robotics Competition
-        // from the application's bundle.
         guard let teamsDataSetFileURL = bundle.url(forResource: Team.teamDataSetName, withExtension: FileExtension.json.rawValue) else { throw LoadingError.fileNotFound }
                 
         // Attempt to read to content of the file located at the given URL.
