@@ -20,8 +20,6 @@
 		BC22778A23E642C9001318E2 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC22778923E642C9001318E2 /* WindowController.swift */; };
 		BC22778C23E64B5F001318E2 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC22778B23E64B5F001318E2 /* TeamController.swift */; };
 		BC29425A23E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29425923E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift */; };
-		BC29425C23E6568D001A1B2A /* NotificationCenter+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29425B23E6568D001A1B2A /* NotificationCenter+Navigation.swift */; };
-		BC29425E23E65769001A1B2A /* NSNotification_Name+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29425D23E65769001A1B2A /* NSNotification_Name+Name.swift */; };
 		BC63CEA123E5DE5900D0F4B5 /* Spacer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = BC63CEA023E5DE5900D0F4B5 /* Spacer.tiff */; };
 		BC63CEB223E5ED6800D0F4B5 /* CompetitionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC63CEB023E5ED6800D0F4B5 /* CompetitionDataViewController.swift */; };
 		BC63CEB323E5ED6800D0F4B5 /* CompetitionDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC63CEB123E5ED6800D0F4B5 /* CompetitionDataViewController.xib */; };
@@ -77,8 +75,6 @@
 		BC22778923E642C9001318E2 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		BC22778B23E64B5F001318E2 /* TeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
 		BC29425923E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSToolbarItem_Identifier+Identifiers.swift"; sourceTree = "<group>"; };
-		BC29425B23E6568D001A1B2A /* NotificationCenter+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Navigation.swift"; sourceTree = "<group>"; };
-		BC29425D23E65769001A1B2A /* NSNotification_Name+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification_Name+Name.swift"; sourceTree = "<group>"; };
 		BC63CEA023E5DE5900D0F4B5 /* Spacer.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Spacer.tiff; sourceTree = "<group>"; };
 		BC63CEB023E5ED6800D0F4B5 /* CompetitionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionDataViewController.swift; sourceTree = "<group>"; };
 		BC63CEB123E5ED6800D0F4B5 /* CompetitionDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetitionDataViewController.xib; sourceTree = "<group>"; };
@@ -250,8 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				BC29425923E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift */,
-				BC29425B23E6568D001A1B2A /* NotificationCenter+Navigation.swift */,
-				BC29425D23E65769001A1B2A /* NSNotification_Name+Name.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,9 +418,7 @@
 				1E9992AD23E4FDDB0088255B /* Team.swift in Sources */,
 				BCCF821D23E53E9300C32ABF /* SideBarViewController.swift in Sources */,
 				BCCF822123E5416100C32ABF /* SideBarItem.swift in Sources */,
-				BC29425E23E65769001A1B2A /* NSNotification_Name+Name.swift in Sources */,
 				BC29425A23E64FD9001A1B2A /* NSToolbarItem_Identifier+Identifiers.swift in Sources */,
-				BC29425C23E6568D001A1B2A /* NotificationCenter+Navigation.swift in Sources */,
 				1E9992BC23E509850088255B /* TeamDataSource.swift in Sources */,
 				1E9992BA23E5094C0088255B /* TeamListViewController.swift in Sources */,
 				BC22778C23E64B5F001318E2 /* TeamController.swift in Sources */,

@@ -8,6 +8,16 @@
 
 import Cocoa
 
+protocol TeamListViewControllerDelegate: class {
+    
+    /// Notifies the delegate every time a team is double-clicked by the user.
+    ///
+    /// - parameter teamListViewController:
+    /// - parameter doubleClickedTeam:
+    func teamListViewController(_ teamListViewController: TeamListViewController, didDoubleClickTeam doubleClickedTeam: Team) -> Void
+    
+}
+
 class TeamListViewController: NSViewController {
     
     @IBOutlet private weak var tableView: NSTableView!
@@ -15,6 +25,7 @@ class TeamListViewController: NSViewController {
     // MARK: - Properties
     
     private let dataSource: TeamDataSource
+    public weak var delegate: TeamListViewControllerDelegate?
     
     // MARK: - Initialization
     
@@ -62,8 +73,11 @@ class TeamListViewController: NSViewController {
     private func onTableViewDoubleClick(_ sender: AnyObject?) {
         guard tableView.selectedRow >= 0 else { return }
         
-        // Get an instance of the selected team.
-        let selectedTeam = dataSource.teams[tableView.selectedRow]
+        // Get an instance of the double-clicked team.
+        let doubleClickedTeam = dataSource.teams[tableView.selectedRow]
+    
+        // Notify the delegate that a team was double-clicked by the user.
+        delegate?.teamListViewController(self, didDoubleClickTeam: doubleClickedTeam)
     }
     
 }

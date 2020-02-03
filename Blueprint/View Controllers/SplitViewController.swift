@@ -23,7 +23,7 @@ class SplitViewController: NSSplitViewController {
     // MARK: - Methods
     
     private func configureInitialDetailViewController() {
-        let initialViewController = TeamListViewController()
+        let initialViewController = CompetitionDataViewController()
         
         // Create an instance of the initial split view item the controller needs to display.
         let initialSplitViewItem = NSSplitViewItem(viewController: initialViewController)
@@ -39,12 +39,15 @@ class SplitViewController: NSSplitViewController {
         sideBarViewController.delegate = self
     }
     
-    // MARK: - Helper methods
-    
-    private static func viewController(forXIBName XIBName: String) -> NSViewController? {
+    private func createViewController(forXIBName XIBName: String) -> NSViewController? {
         switch XIBName {
         case "TeamListViewController":
-            return TeamListViewController()
+            let teamListViewController = TeamListViewController()
+            
+            // Set the view controller's delegate
+            teamListViewController.delegate = self
+            
+            return teamListViewController
             
         case "CompetitionDataViewController":
             return CompetitionDataViewController()
@@ -74,7 +77,7 @@ extension SplitViewController: WindowToolbarDelegate {
 extension SplitViewController: SideBarViewControllerDelegate {
     
     func sideBarViewController(_ sideBarViewController: SideBarViewController, didSelectSideBarItem sideBarItem: SideBarItem) {
-        guard let viewController = SplitViewController.viewController(forXIBName: sideBarItem.XIBName) else { return }
+        guard let viewController = self.createViewController(forXIBName: sideBarItem.XIBName) else { return }
         
         // Get the split view item currently displayed by the view controller.
         let currentSplitViewItem = splitViewItems[1]
@@ -84,6 +87,31 @@ extension SplitViewController: SideBarViewControllerDelegate {
         
         // Create an instance of the split view item the controller needs to display.
         let newSplitViewItem = NSSplitViewItem(viewController: viewController)
+        
+        // Add the created split view item as a split view item of the controller.
+        addSplitViewItem(newSplitViewItem)
+    }
+    
+}
+
+// MARK: - Team List View Controller delegate
+extension SplitViewController: TeamListViewControllerDelegate {
+    
+    private func updateTeamViewController(withTeam team: Team) {
+        guard let teamDetailViewController = splitViewItems[2].viewController as? TeamDetailViewController else { return }
+    
+        // Update the view managed by the view controller.
+        teamDetailViewController.populateViews(withTeam: team)
+    }
+    
+    func teamListViewController(_ teamListViewController: TeamListViewController, didDoubleClickTeam doubleClickedTeam: Team) {
+        guard splitViewItems.count < 3 else { updateTeamViewController(withTeam: doubleClickedTeam) ; return }
+        
+        // Get an instance of the Team Detail View Controller and initialize its team property.
+        let teamDetailViewController = TeamDetailViewController(team: doubleClickedTeam)
+ 
+        // Create an instance of the split view item the controller needs to display.
+        let newSplitViewItem = NSSplitViewItem(viewController: teamDetailViewController)
         
         // Add the created split view item as a split view item of the controller.
         addSplitViewItem(newSplitViewItem)

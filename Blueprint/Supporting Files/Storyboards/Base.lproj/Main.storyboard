@@ -691,34 +691,6 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="F3556475-48AB-4520-9FE8-9A51BCDC4DB2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="SQ8-At-Ose">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="45FB7E0A-D47B-4542-B77D-E5C9EF899AB0" label="Previous" paletteLabel="Previous" image="NSGoBackTemplate" sizingBehavior="auto" id="rT4-Sa-y1b">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="VF5-qF-OqU">
-                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoBackTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WdQ-98-Hu8">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                    <connections>
-                                        <action selector="backwardToolbarItemClicked:" target="B8D-0N-5wS" id="hyH-Zj-DpN"/>
-                                    </connections>
-                                </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="200E1D81-8759-4ED6-9A14-00F92C24082A" label="Next" paletteLabel="Next" image="NSGoForwardTemplate" sizingBehavior="auto" id="lJd-8X-9bn">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="TOK-9E-ew8">
-                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoForwardTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hx2-l1-2za">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                    <connections>
-                                        <action selector="forwardToolbarItemClicked:" target="B8D-0N-5wS" id="oqG-00-XG1"/>
-                                    </connections>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="95023732-79B9-4BFF-8517-63A1934AA440" label="Sidebar" paletteLabel="Sidebar" image="NSTouchBarSidebarTemplate" sizingBehavior="auto" id="BEp-gT-cle">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="ZS6-Ce-EW2">
@@ -735,8 +707,6 @@
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="rT4-Sa-y1b"/>
-                                <toolbarItem reference="lJd-8X-9bn"/>
                                 <toolbarItem reference="BEp-gT-cle"/>
                             </defaultToolbarItems>
                         </toolbar>
@@ -745,8 +715,6 @@
                         </connections>
                     </window>
                     <connections>
-                        <outlet property="backwardToolbarItem" destination="rT4-Sa-y1b" id="qdk-u8-uVg"/>
-                        <outlet property="forwardToolbarItem" destination="lJd-8X-9bn" id="J05-Vo-6fg"/>
                         <outlet property="toolbar" destination="SQ8-At-Ose" id="ZSD-QL-52T"/>
                         <segue destination="g6r-VH-3s5" kind="relationship" relationship="window.shadowedContentViewController" id="x3S-L1-eMg"/>
                     </connections>
@@ -906,8 +874,6 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSGoBackTemplate" width="9" height="12"/>
-        <image name="NSGoForwardTemplate" width="9" height="12"/>
         <image name="NSTouchBarSidebarTemplate" width="22" height="30"/>
         <image name="Spacer" width="10" height="23"/>
     </resources>

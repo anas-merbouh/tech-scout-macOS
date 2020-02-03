@@ -22,30 +22,10 @@ protocol WindowToolbarDelegate: class {
 class WindowController: NSWindowController {
 
     @IBOutlet private weak var toolbar: NSToolbar!
-    
-    @IBOutlet private weak var forwardToolbarItem: NSToolbarItem!
-    @IBOutlet private weak var backwardToolbarItem: NSToolbarItem!
-    
+
     // MARK: - Properties
     
     public weak var delegate: WindowToolbarDelegate?
-    private let navigationNotificationCenter: NotificationCenter
-    
-    // MARK: - Initialization
-    
-    override init(window: NSWindow?) {
-        self.navigationNotificationCenter = NotificationCenter.navigation
-        
-        // Call the super class's implementation of the constructor.
-        super.init(window: window)
-    }
-    
-    required init?(coder: NSCoder) {
-        self.navigationNotificationCenter = NotificationCenter.navigation
-        
-        // Call the super class's implementation of the constructor.
-        super.init(coder: coder)
-    }
     
     // MARK: - Window's lifecycle
     
@@ -54,8 +34,6 @@ class WindowController: NSWindowController {
         
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
         configureDelegate()
-        backwardToolbarItem.isEnabled = false
-        forwardToolbarItem.isEnabled = false
     }
     
     // MARK: - Methods
@@ -69,14 +47,6 @@ class WindowController: NSWindowController {
     
     @IBAction private func sideBarToolbarItemClicked(_ sender: NSToolbarItem) {
         delegate?.windowToolbar(toolbar, didClickSideBarToolbarItem: sender)
-    }
-    
-    @IBAction private func forwardToolbarItemClicked(_ sender: NSToolbarItem) {
-        navigationNotificationCenter.post(name: .TCForwardToolbarItemClicked, object: sender)
-    }
-    
-    @IBAction private func backwardToolbarItemClicked(_ sender: NSToolbarItem) {
-        navigationNotificationCenter.post(name: .TCBackwardToolbarItemClicked, object: sender)
     }
     
 }
