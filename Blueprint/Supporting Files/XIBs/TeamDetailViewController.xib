@@ -208,13 +208,7 @@
                         </tabViewItem>
                         <tabViewItem label="Robot Info" identifier="" id="pPI-8Y-QGt" userLabel="Robot Info">
                             <view key="view" id="q7c-xA-paq">
-                                <rect key="frame" x="10" y="33" width="563" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </view>
-                        </tabViewItem>
-                        <tabViewItem label="Statistics" identifier="" id="ffr-IF-Xjj" userLabel="Statistics">
-                            <view key="view" id="OSS-mO-Hwh">
-                                <rect key="frame" x="10" y="33" width="563" height="85"/>
+                                <rect key="frame" x="10" y="33" width="654" height="109"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                         </tabViewItem>
