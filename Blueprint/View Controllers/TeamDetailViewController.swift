@@ -13,6 +13,16 @@ class TeamDetailViewController: NSViewController {
     @IBOutlet private weak var nicknameLabel: NSTextField!
     @IBOutlet private weak var locationLabel: NSTextField!
     
+    @IBOutlet private weak var rookieYearLabel: NSTextField!
+    @IBOutlet private weak var schoolNameLabel: NSTextField!
+    @IBOutlet private weak var teamNumberLabel: NSTextField!
+    @IBOutlet private weak var websiteLabel: NSTabView!
+    
+    @IBOutlet private weak var climbTypeLabel: NSTextField!
+    @IBOutlet private weak var intakeTypeLabel: NSTextField!
+    @IBOutlet private weak var shooterTypeLabel: NSTextField!
+    @IBOutlet weak var drivebaseTypeLabel: NSTextField!
+    
     // MARK: - Properties
     
     private var team: Team?
@@ -49,6 +59,15 @@ class TeamDetailViewController: NSViewController {
     public func populateViews(withTeam team: Team) {
         nicknameLabel.stringValue = team.nickname
         locationLabel.stringValue = team.location
+        teamNumberLabel.stringValue = "\(team.number)"
+        schoolNameLabel.stringValue = team.schoolName ?? "No school name associated with the team"
+        
+        // Populate the rookie year label with the appropriate value.
+        if let rookieYear = team.rookieYear {
+            rookieYearLabel.stringValue = "\(rookieYear)"
+        } else {
+            rookieYearLabel.stringValue = "The team does not have any rookie award"
+        }
     }
     
 }
