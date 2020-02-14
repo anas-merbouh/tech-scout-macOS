@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TeamDetailViewController" customModule="Blueprint" customModuleProvider="target">
+            <connections>
+                <outlet property="climbTypeLabel" destination="jnp-Rl-bZa" id="J64-9P-5gX"/>
+                <outlet property="drivebaseTypeLabel" destination="2Pn-wz-65H" id="jCl-eL-kB6"/>
+                <outlet property="intakeTypeLabel" destination="Nfs-Dq-JbV" id="7Tr-aU-PlG"/>
+                <outlet property="locationLabel" destination="EZ5-ED-Umj" id="tJL-ym-JfG"/>
+                <outlet property="nicknameLabel" destination="zdc-6u-LX6" id="Vtu-as-nsn"/>
+                <outlet property="rookieYearLabel" destination="3Mg-PX-r7h" id="Asy-t1-sKI"/>
+                <outlet property="schoolNameLabel" destination="X9n-wU-hI4" id="igm-cn-nrM"/>
+                <outlet property="shooterTypeLabel" destination="Xx0-Nk-uPQ" id="4vZ-b0-ryD"/>
+                <outlet property="teamNumberLabel" destination="ki6-ge-Kzs" id="qgN-kR-yKH"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="websiteLabel" destination="WUA-S8-bfQ" id="czJ-jr-1eG"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="708" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PUH-M3-Mim">
+                    <rect key="frame" x="24" y="182" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="aK1-PQ-QIv"/>
+                        <constraint firstAttribute="width" constant="80" id="sV1-70-7Lb"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="IU6-Bi-utF"/>
+                </imageView>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FmF-lN-JGV" userLabel="Basic Team Info Container Stack View">
+                    <rect key="frame" x="128" y="204" width="556" height="37"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-6u-LX6">
+                            <rect key="frame" x="-2" y="16" width="305" height="21"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Équipe Team 3990 : Tech For Kids" id="mhd-3k-cJ5">
+                                <font key="font" metaFont="systemHeavy" size="18"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EZ5-ED-Umj">
+                            <rect key="frame" x="-2" y="0.0" width="209" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="from  Montréal, Québec, Canada " id="A6Q-C2-CEK">
+                                <font key="font" metaFont="systemMedium" size="13"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <tabView translatesAutoresizingMaskIntoConstraints="NO" id="WUA-S8-bfQ">
+                    <rect key="frame" x="17" y="14" width="674" height="172"/>
+                    <font key="font" metaFont="system"/>
+                    <tabViewItems>
+                        <tabViewItem label="Team Info" identifier="" id="gUN-r8-ee6">
+                            <view key="view" id="l9u-Ab-Zhf">
+                                <rect key="frame" x="10" y="33" width="654" height="126"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNS-48-apl" userLabel="Team Info Container Stack View">
+                                        <rect key="frame" x="17" y="35" width="257" height="88"/>
+                                        <subviews>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLu-Oh-bq1" userLabel="Rookie Year Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="72" width="111" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-wH-jmS">
+                                                        <rect key="frame" x="-2" y="0.0" width="79" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Rookie Year:" id="J3J-Xo-tDY">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Mg-PX-r7h">
+                                                        <rect key="frame" x="79" y="0.0" width="34" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="2012" id="hGy-aD-kD6">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-Op-Nkb" userLabel="Team Number Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="48" width="246" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1qW-yz-GRk">
+                                                        <rect key="frame" x="-2" y="0.0" width="89" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="School Name:" id="c4m-Ph-pWG">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X9n-wU-hI4">
+                                                        <rect key="frame" x="89" y="0.0" width="159" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Collège Regina Assumpta" id="Xfh-Oa-fD1">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-iA-zzr" userLabel="Team Number Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="24" width="128" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dp1-xS-mff">
+                                                        <rect key="frame" x="-2" y="0.0" width="93" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Team Number:" id="AEM-60-znA">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ki6-ge-Kzs">
+                                                        <rect key="frame" x="93" y="0.0" width="37" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="3990" id="k3u-bg-8Ro">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNR-G2-pEN" userLabel="Team Motto Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-Ru-sAF">
+                                                        <rect key="frame" x="-2" y="0.0" width="93" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Team Website:" id="52B-AA-05l">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="85G-Yk-0Z6">
+                                                        <rect key="frame" x="93" y="0.0" width="166" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="http://www.team3990.com" id="cHb-Ut-Jfd">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fNS-48-apl" secondAttribute="bottom" constant="17" id="2K4-bE-og1"/>
+                                    <constraint firstItem="fNS-48-apl" firstAttribute="top" secondItem="l9u-Ab-Zhf" secondAttribute="top" constant="3" id="5bl-VT-5t6"/>
+                                    <constraint firstItem="fNS-48-apl" firstAttribute="leading" secondItem="l9u-Ab-Zhf" secondAttribute="leading" constant="17" id="L6T-ss-5rE"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fNS-48-apl" secondAttribute="trailing" constant="17" id="tNp-iH-BpY"/>
+                                </constraints>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Robot Info" identifier="" id="pPI-8Y-QGt" userLabel="Robot Info">
+                            <view key="view" id="q7c-xA-paq">
+                                <rect key="frame" x="10" y="33" width="654" height="109"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-ed-o2T" userLabel="Robot Info Container Stack View">
+                                        <rect key="frame" x="17" y="35" width="146" height="88"/>
+                                        <subviews>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXh-Zm-Grt" userLabel="Climb Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="72" width="146" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-YC-FmK">
+                                                        <rect key="frame" x="-2" y="0.0" width="76" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Type Climb:" id="uKO-FX-5YS">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-Rl-bZa">
+                                                        <rect key="frame" x="76" y="0.0" width="72" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Scissor Lift" id="lcK-1W-Qto">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-vp-15e" userLabel="Intake Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="48" width="110" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u2j-vT-wNG">
+                                                        <rect key="frame" x="-2" y="0.0" width="78" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Type Intake:" id="Moo-5K-9G1">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-Dq-JbV">
+                                                        <rect key="frame" x="78" y="0.0" width="34" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="2012" id="TEt-m8-M1t">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjM-Sm-EsZ" userLabel="Shooter Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="24" width="128" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-ma-oWj">
+                                                        <rect key="frame" x="-2" y="0.0" width="89" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Type Shooter:" id="Prv-kK-sy0">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-Nk-uPQ">
+                                                        <rect key="frame" x="89" y="0.0" width="41" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Turret" id="986-kS-Nyd">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXQ-Wm-AdV" userLabel="Drivebase Detail Container Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="16"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oK3-qk-LKM">
+                                                        <rect key="frame" x="-2" y="0.0" width="98" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Type Drivebase" id="gn4-0y-kXJ">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Pn-wz-65H">
+                                                        <rect key="frame" x="98" y="0.0" width="33" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Tank" id="T22-Qk-3ao">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EdF-ed-o2T" secondAttribute="bottom" constant="17" id="Aft-FB-QDC"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EdF-ed-o2T" secondAttribute="trailing" constant="17" id="Czc-dP-4sP"/>
+                                    <constraint firstItem="EdF-ed-o2T" firstAttribute="top" secondItem="q7c-xA-paq" secondAttribute="top" constant="3" id="kuW-wH-4xM"/>
+                                    <constraint firstItem="EdF-ed-o2T" firstAttribute="leading" secondItem="q7c-xA-paq" secondAttribute="leading" constant="17" id="ohv-M3-rOO"/>
+                                </constraints>
+                            </view>
+                        </tabViewItem>
+                    </tabViewItems>
+                </tabView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="PUH-M3-Mim" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="24" id="30X-Ri-AZP"/>
+                <constraint firstItem="PUH-M3-Mim" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="24" id="4zl-pV-7vR"/>
+                <constraint firstItem="WUA-S8-bfQ" firstAttribute="leading" secondItem="PUH-M3-Mim" secondAttribute="leading" id="6ay-Eh-ORV"/>
+                <constraint firstItem="WUA-S8-bfQ" firstAttribute="top" secondItem="FmF-lN-JGV" secondAttribute="bottom" constant="24" id="FP8-hm-EES"/>
+                <constraint firstItem="FmF-lN-JGV" firstAttribute="centerY" secondItem="PUH-M3-Mim" secondAttribute="centerY" id="Gfx-iW-bVJ"/>
+                <constraint firstItem="FmF-lN-JGV" firstAttribute="leading" secondItem="PUH-M3-Mim" secondAttribute="trailing" constant="24" id="Jwb-LT-Aj9"/>
+                <constraint firstAttribute="trailing" secondItem="FmF-lN-JGV" secondAttribute="trailing" constant="24" id="aWO-Ih-bhI"/>
+                <constraint firstItem="WUA-S8-bfQ" firstAttribute="trailing" secondItem="FmF-lN-JGV" secondAttribute="trailing" id="bvl-B8-nfw"/>
+                <constraint firstAttribute="bottom" secondItem="WUA-S8-bfQ" secondAttribute="bottom" constant="24" id="lJ7-hb-oOq"/>
+            </constraints>
+            <point key="canvasLocation" x="-187" y="209.5"/>
+        </customView>
+    </objects>
+</document>
