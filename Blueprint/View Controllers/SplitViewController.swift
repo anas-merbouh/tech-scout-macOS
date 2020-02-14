@@ -22,6 +22,13 @@ class SplitViewController: NSSplitViewController {
     
     // MARK: - Methods
     
+    private func configureSideBarViewController() {
+        guard let sideBarViewController = splitViewItems[0].viewController as? SideBarViewController else { return }
+    
+        // Set the view controller's delegate.
+        sideBarViewController.delegate = self
+    }
+    
     private func configureInitialDetailViewController() {
         let initialViewController = CompetitionDataViewController()
         
@@ -32,11 +39,23 @@ class SplitViewController: NSSplitViewController {
         addSplitViewItem(initialSplitViewItem)
     }
     
-    private func configureSideBarViewController() {
-        guard let sideBarViewController = splitViewItems[0].viewController as? SideBarViewController else { return }
-    
-        // Set the view controller's delegate.
-        sideBarViewController.delegate = self
+    private func prepareForSplitViewItemReplacement() {
+        guard splitViewItems.count > 1 else { return }
+        
+        // Initialize the array of split view items to remove.
+        var removedSplitViewItems = [NSSplitViewItem]()
+        
+        // Insert the appropriate elements in the array of split view items to remove.
+        for splitViewItemIndex in 1...splitViewItems.count-1 {
+            let splitViewItem = splitViewItems[splitViewItemIndex]
+            
+            // Append the NSSplitViewItem instance to the array of split view items
+            // that need to be removed.
+            removedSplitViewItems.append(splitViewItem)
+        }
+        
+        // Remove the appropriate split view items.
+        removedSplitViewItems.forEach { removeSplitViewItem($0) }
     }
     
     private func createViewController(forXIBName XIBName: String) -> NSViewController? {
@@ -79,12 +98,10 @@ extension SplitViewController: SideBarViewControllerDelegate {
     func sideBarViewController(_ sideBarViewController: SideBarViewController, didSelectSideBarItem sideBarItem: SideBarItem) {
         guard let viewController = self.createViewController(forXIBName: sideBarItem.XIBName) else { return }
         
-        // Get the split view item currently displayed by the view controller.
-        let currentSplitViewItem = splitViewItems[1]
-        
-        // Remove the current view controller displayed at the index number of the split views.
-        removeSplitViewItem(currentSplitViewItem)
-        
+        // Loop through each item of the split view that is not the side bar and remove
+        // it.
+        prepareForSplitViewItemReplacement()
+
         // Create an instance of the split view item the controller needs to display.
         let newSplitViewItem = NSSplitViewItem(viewController: viewController)
         

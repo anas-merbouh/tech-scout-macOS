@@ -22,6 +22,7 @@ struct Team: Decodable {
         case number = "team_number"
         case province = "state_prov"
         case rookieYear = "rookie_year"
+        case schoolName = "school_name"
     }
     
     // MARK: - Properties
@@ -48,6 +49,9 @@ struct Team: Decodable {
     /// An Unsigned Integer representing the year during which the team received
     /// the rookie all-star award. Optional.
     public let rookieYear: UInt?
+    
+    /// A String representing the name of the school the team belongs to. Optional.
+    public let schoolName: String?
     
     public var location: String {
         guard let city = self.city,
