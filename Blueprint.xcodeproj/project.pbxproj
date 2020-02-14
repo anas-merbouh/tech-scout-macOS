@@ -18,6 +18,8 @@
 		1E9992BA23E5094C0088255B /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992B923E5094C0088255B /* TeamListViewController.swift */; };
 		1E9992BC23E509850088255B /* TeamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992BB23E509850088255B /* TeamDataSource.swift */; };
 		1E9992BF23E50F200088255B /* TeamNameTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */; };
+		BC1341D723F1186600F7C725 /* OPRCalculationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1341D623F1186600F7C725 /* OPRCalculationsController.swift */; };
+		BC1341DB23F11A4300F7C725 /* OPRCalculations.metal in Sources */ = {isa = PBXBuildFile; fileRef = BC1341DA23F11A4300F7C725 /* OPRCalculations.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		1E9992B923E5094C0088255B /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		1E9992BB23E509850088255B /* TeamDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataSource.swift; sourceTree = "<group>"; };
 		1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNameTableCellView.swift; sourceTree = "<group>"; };
+		BC1341D623F1186600F7C725 /* OPRCalculationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPRCalculationsController.swift; sourceTree = "<group>"; };
+		BC1341DA23F11A4300F7C725 /* OPRCalculations.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OPRCalculations.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				1E99927C23E4FC620088255B /* AppDelegate.swift */,
+				BC1341D623F1186600F7C725 /* OPRCalculationsController.swift */,
 				1E9992AB23E4FDC40088255B /* Models */,
 				1E9992BD23E50E6A0088255B /* Views */,
 				1E9992A823E4FC6B0088255B /* View Controllers */,
@@ -151,6 +156,7 @@
 			children = (
 				1E9992B423E503E60088255B /* Teams */,
 				1E9992AA23E4FC860088255B /* Storyboards */,
+				BC1341D923F11A2400F7C725 /* Metal Shaders */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,6 +199,14 @@
 				1E9992BE23E50F200088255B /* TeamNameTableCellView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BC1341D923F11A2400F7C725 /* Metal Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				BC1341DA23F11A4300F7C725 /* OPRCalculations.metal */,
+			);
+			path = "Metal Shaders";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9992AD23E4FDDB0088255B /* Team.swift in Sources */,
+				BC1341DB23F11A4300F7C725 /* OPRCalculations.metal in Sources */,
 				1E9992B023E4FF440088255B /* TeamRepository.swift in Sources */,
 				1E9992BC23E509850088255B /* TeamDataSource.swift in Sources */,
+				BC1341D723F1186600F7C725 /* OPRCalculationsController.swift in Sources */,
 				1E9992BA23E5094C0088255B /* TeamListViewController.swift in Sources */,
 				1E9992BF23E50F200088255B /* TeamNameTableCellView.swift in Sources */,
 				1E99927D23E4FC620088255B /* AppDelegate.swift in Sources */,
